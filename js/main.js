@@ -3,10 +3,12 @@ const navToggle = document.getElementById('nav-toggle');
 const mainNav = document.getElementById('main-nav');
 navToggle?.addEventListener('click', () => {
   const open = mainNav.classList.toggle('open');
+  navToggle.classList.toggle('open', open);
   navToggle.setAttribute('aria-expanded', open);
 });
 mainNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   mainNav.classList.remove('open');
+  navToggle?.classList.remove('open');
   navToggle?.setAttribute('aria-expanded', false);
 }));
 
