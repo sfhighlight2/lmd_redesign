@@ -206,6 +206,18 @@ acceptCookies?.addEventListener('click', () => {
 });
 openCookieSettings?.addEventListener('click', () => cookieBanner?.classList.add('show'));
 
+// ============ SERVICES "SEE MORE" TOGGLE ============
+const bentoGrid = document.getElementById('bento-grid');
+const bentoMoreToggle = document.getElementById('bento-more-toggle');
+if (bentoGrid && bentoMoreToggle) {
+  const bentoMoreLabel = bentoMoreToggle.querySelector('span');
+  bentoMoreToggle.addEventListener('click', () => {
+    const expanded = bentoGrid.classList.toggle('expanded');
+    bentoMoreToggle.setAttribute('aria-expanded', String(expanded));
+    if (bentoMoreLabel) bentoMoreLabel.textContent = expanded ? 'See less' : 'See more';
+  });
+}
+
 // ============ FLOATING CONTACT BUBBLE ============
 const floatContact = document.getElementById('float-contact');
 const floatContactToggle = document.getElementById('float-contact-toggle');

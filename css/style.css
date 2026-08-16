@@ -129,10 +129,10 @@ button{ font-family:inherit; cursor:pointer; }
 
 /* ---- Services mega menu ---- */
 .nav-mega{
-  width:680px; max-width:90vw; min-width:0; padding:18px;
-  display:grid; grid-template-columns: 1.6fr 1fr; gap:18px;
+  width:860px; max-width:92vw; min-width:0; padding:18px;
+  display:grid; grid-template-columns: 1.8fr 1fr; gap:18px;
 }
-.nav-mega-grid{ display:grid; grid-template-columns:1fr 1fr; gap:2px; align-content:start; }
+.nav-mega-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; align-content:start; }
 .nav-mega-item{
   display:flex; align-items:flex-start; gap:12px; padding:12px; border-radius: var(--radius-md);
   transition: background .2s ease;
@@ -356,6 +356,24 @@ button{ font-family:inherit; cursor:pointer; }
 .bento-card p{ font-size:14px; color:#fff; line-height:1.55; }
 .bento-media{ border-radius: var(--radius-md); overflow:hidden; margin-bottom:20px; aspect-ratio: 4/2.4; }
 .bento-media-placeholder{ background:#3a3d47; border:1px solid rgba(255,255,255,.06); }
+
+.bento-more-row{ grid-column: 1 / -1; display:flex; justify-content:center; }
+.bento-more-toggle{
+  display:inline-flex; align-items:center; gap:8px; padding:12px 26px; border-radius:999px;
+  background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.18); color:#fff;
+  font-size:14px; font-weight:600; cursor:pointer; transition: background .2s ease, border-color .2s ease;
+}
+.bento-more-toggle:hover{ background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.32); }
+.bento-more-caret{ transition: transform .3s var(--ease); }
+.bento-grid.expanded .bento-more-caret{ transform: rotate(180deg); }
+.bento-card-extra{ display:none; }
+.bento-grid.expanded .bento-card-extra{ display:block; animation: bento-card-in .5s var(--ease) both; }
+.bento-grid.expanded .bento-card-extra-2{ animation-delay:.07s; }
+.bento-grid.expanded .bento-card-extra-3{ animation-delay:.14s; }
+@keyframes bento-card-in{ from{ opacity:0; transform: translateY(16px); } to{ opacity:1; transform:translateY(0); } }
+@media (prefers-reduced-motion: reduce){
+  .bento-grid.expanded .bento-card-extra{ animation:none; }
+}
 
 /* ============ CLIENT RESULTS: QUOTE SPOTLIGHT ============ */
 .testimonials{ padding: 100px 0 40px; }
