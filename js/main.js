@@ -104,6 +104,26 @@ if (leadForm) {
   });
 }
 
+// ============ CONTACT FORM (contact.html) ============
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const firstName = document.getElementById('cf-first-name').value.trim();
+    const lastName = document.getElementById('cf-last-name').value.trim();
+    const name = `${firstName} ${lastName}`.trim();
+    const email = document.getElementById('cf-email').value.trim();
+    const phone = document.getElementById('cf-phone').value.trim();
+    const business = document.getElementById('cf-business').value.trim();
+    const message = document.getElementById('cf-message').value.trim();
+    const subject = encodeURIComponent('New Contact Form Submission');
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nBusiness: ${business}\n\nMessage:\n${message}`
+    );
+    window.location.href = `mailto:letschat@livemediadigital.com?subject=${subject}&body=${body}`;
+  });
+}
+
 // ============ HERO CURSOR SPOTLIGHT ============
 const heroDark = document.getElementById('hero-dark');
 const heroSpotlight = document.getElementById('hero-spotlight');
@@ -275,8 +295,9 @@ if (exitPopup) {
   });
 
   // Mobile "tap" equivalent: a deliberate upward scroll after the visitor
-  // has already read well into the page (a reasonable proxy for exit intent
-  // on touch devices, which have no cursor to track).
+  // has already reached near the bottom of the page (a reasonable proxy for
+  // exit intent on touch devices, which have no cursor to track). Requiring
+  // near-bottom depth avoids firing on normal "scroll up to re-read" behavior.
   let maxScrollDepth = 0;
   let lastScrollY = window.scrollY;
   window.addEventListener('scroll', () => {
@@ -284,7 +305,7 @@ if (exitPopup) {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     const depth = scrollable > 0 ? y / scrollable : 0;
     maxScrollDepth = Math.max(maxScrollDepth, depth);
-    if (maxScrollDepth > 0.5 && lastScrollY - y > 60) showExitPopup();
+    if (maxScrollDepth > 0.85 && lastScrollY - y > 60) showExitPopup();
     lastScrollY = y;
   }, { passive: true });
 

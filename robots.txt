@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /get-report.html
+
+Sitemap: https://livemediadigital.com/sitemap.xml
