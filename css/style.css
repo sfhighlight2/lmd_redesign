@@ -469,7 +469,7 @@ button{ font-family:inherit; cursor:pointer; }
 .trust-tiles-head p{ color: var(--color-text-muted); font-size:16px; line-height:1.6; max-width:380px; }
 .trust-tiles-marquee{ width:100%; overflow:hidden; mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
 .trust-tiles-track{ display:flex; align-items:center; gap:56px; width:max-content; animation: scroll-left 50s linear infinite; }
-.trust-tiles-track img{ height:42px; width:auto; flex-shrink:0; opacity:.85; transition: opacity .25s ease, transform .25s var(--ease); }
+.trust-tiles-track img{ height:64px; width:auto; flex-shrink:0; opacity:.85; transition: opacity .25s ease, transform .25s var(--ease); }
 .trust-tiles-track img:hover{ opacity:1; transform: scale(1.08); }
 .trust-tiles-marquee:hover .trust-tiles-track{ animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce){ .trust-tiles-track{ animation:none; overflow-x:auto; } }
