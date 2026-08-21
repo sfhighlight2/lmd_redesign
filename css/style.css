@@ -399,7 +399,7 @@ button{ font-family:inherit; cursor:pointer; }
 }
 .qs-slide.is-active{ position:relative; opacity:1; transform:translateY(0); pointer-events:auto; }
 .qs-slide p{
-  font-family: var(--font-heading); font-size: clamp(21px,2.4vw,30px); line-height:1.4; font-weight:600;
+  font-family: var(--font-heading); font-size: clamp(21px,2.4vw,30px); line-height:1.4; font-weight:400;
   letter-spacing:-.01em; text-align:center; text-wrap: balance;
 }
 .qs-footer{ display:flex; flex-direction:column; align-items:center; gap:16px; margin-top:32px; }
