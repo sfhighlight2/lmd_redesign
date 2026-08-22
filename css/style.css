@@ -493,7 +493,6 @@ button{ font-family:inherit; cursor:pointer; }
 .faq{ padding: 110px 0; }
 .faq-grid{ display:grid; grid-template-columns: 0.8fr 1.2fr; gap:80px; align-items:start; }
 .faq-grid .section-head{ text-align:left; margin:0; max-width:none; }
-.faq-visual-placeholder{ margin-top:32px; aspect-ratio: 4/3; border-radius: var(--radius-lg); background:#e4e6ea; border:1px solid var(--color-border); }
 .faq-item{ border-bottom:1px solid var(--color-border); }
 .faq-q{
   width:100%; display:flex; align-items:center; justify-content:space-between;
