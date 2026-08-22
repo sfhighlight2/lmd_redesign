@@ -89,6 +89,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://livemediadigital.com/industries/insurance-agencies.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://livemediadigital.com/industries/landscaping.html</loc>
     <priority>0.8</priority>
   </url>
@@ -117,6 +121,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://livemediadigital.com/industries/personal-brands-coaches.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://livemediadigital.com/industries/pest-control.html</loc>
     <priority>0.8</priority>
   </url>
@@ -126,6 +134,10 @@
   </url>
   <url>
     <loc>https://livemediadigital.com/industries/real-estate.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://livemediadigital.com/industries/research-centers.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -177,7 +189,15 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://livemediadigital.com/services/business-automation.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://livemediadigital.com/services/content-marketing.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://livemediadigital.com/services/digital-infrastructure-consulting.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -198,6 +218,10 @@
   </url>
   <url>
     <loc>https://livemediadigital.com/services/social-media-marketing.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://livemediadigital.com/services/software-development.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
