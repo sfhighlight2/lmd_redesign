@@ -33,6 +33,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://livemediadigital.com/case-studies/engineered-tax-services.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://livemediadigital.com/case-studies/miracle-leaf.html</loc>
     <priority>0.6</priority>
   </url>
@@ -162,6 +166,10 @@
   </url>
   <url>
     <loc>https://livemediadigital.com/privacy-policy.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://livemediadigital.com/process.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
