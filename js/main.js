@@ -253,9 +253,10 @@ if (bentoGrid && bentoMoreToggle) {
 // ============ LAZY-PLAY BENTO CARD VIDEOS ============
 // preload="none" videos only start fetching once their card is about to
 // enter the viewport, so collapsed "see more" cards and off-screen cards
-// don't all download at once.
+// don't all download at once. Respects prefers-reduced-motion by leaving
+// the poster image in place instead of autoplaying.
 const bentoVideos = document.querySelectorAll('.bento-media video');
-if (bentoVideos.length) {
+if (bentoVideos.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const bentoVideoObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
