@@ -250,6 +250,23 @@ if (bentoGrid && bentoMoreToggle) {
   });
 }
 
+// ============ LAZY-PLAY BENTO CARD VIDEOS ============
+// preload="none" videos only start fetching once their card is about to
+// enter the viewport, so collapsed "see more" cards and off-screen cards
+// don't all download at once.
+const bentoVideos = document.querySelectorAll('.bento-media video');
+if (bentoVideos.length) {
+  const bentoVideoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.play().catch(() => {});
+        bentoVideoObserver.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '200px' });
+  bentoVideos.forEach((v) => bentoVideoObserver.observe(v));
+}
+
 // ============ FLOATING CONTACT BUBBLE ============
 const floatContact = document.getElementById('float-contact');
 const floatContactToggle = document.getElementById('float-contact-toggle');
