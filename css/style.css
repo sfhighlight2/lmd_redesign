@@ -560,8 +560,7 @@ button{ font-family:inherit; cursor:pointer; }
 .plan-card.featured{ border-color: var(--color-primary); box-shadow: 0 20px 50px -20px rgba(199,154,60,.3); transform: scale(1.03); }
 .popular-pill{ position:absolute; top:-13px; left:32px; background: var(--color-primary); color: var(--color-navy); font-size:11px; font-weight:700; letter-spacing:.05em; padding:5px 12px; border-radius:999px; }
 .plan-card h3{ font-size:19px; margin-bottom:10px; }
-.plan-desc{ font-size:14px; color: var(--color-text-muted); line-height:1.5; min-height:42px; }
-.plan-price{ font-family: var(--font-heading); font-size:26px; font-weight:700; margin: 20px 0 24px; }
+.plan-desc{ font-size:14px; color: var(--color-text-muted); line-height:1.5; min-height:42px; margin-bottom:24px; }
 .plan-card .check-list{ flex:1; margin-bottom:28px; }
 .plans-trust-strip{
   display:flex; align-items:center; justify-content:center; gap:28px; flex-wrap:wrap;
