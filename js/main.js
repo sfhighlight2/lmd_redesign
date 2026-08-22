@@ -70,13 +70,23 @@ window.addEventListener('resize', () => {
 
 // ============ HERO AI VISIBILITY SEARCH ============
 const heroSearchForm = document.getElementById('hero-search-form');
+const heroSearchError = document.getElementById('hero-search-error');
+const isValidWebsiteUrl = (value) =>
+  /^(https?:\/\/)?([a-zA-Z0-9](-?[a-zA-Z0-9])*\.)+[a-zA-Z]{2,}(:\d+)?(\/\S*)?$/.test(value);
 heroSearchForm?.addEventListener('submit', (e) => {
   e.preventDefault();
   const input = document.getElementById('hero-search-input');
-  let url = input.value.trim();
-  if (!url) return;
-  if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
-  window.location.href = `get-report.html?url=${encodeURIComponent(url)}`;
+  const url = input.value.trim();
+  const valid = url && isValidWebsiteUrl(url);
+  heroSearchError?.classList.toggle('is-visible', !valid);
+  heroSearchForm.classList.toggle('has-error', !valid);
+  if (!valid) { input.focus(); return; }
+  const normalizedUrl = /^https?:\/\//i.test(url) ? url : 'https://' + url;
+  window.location.href = `get-report.html?url=${encodeURIComponent(normalizedUrl)}`;
+});
+document.getElementById('hero-search-input')?.addEventListener('input', () => {
+  heroSearchError?.classList.remove('is-visible');
+  heroSearchForm?.classList.remove('has-error');
 });
 
 // ============ LEAD FORM (get-report.html) ============

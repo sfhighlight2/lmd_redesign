@@ -132,9 +132,10 @@
       <form class="reveal hero-search" id="hero-search-form">
         <svg class="hero-search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3" stroke-linecap="round"/></svg>
         <label for="hero-search-input" class="sr-only">Enter your website URL</label>
-        <input type="text" id="hero-search-input" name="url" placeholder="yourwebsite.com" autocomplete="url" inputmode="url" required />
+        <input type="text" id="hero-search-input" name="url" placeholder="yourwebsite.com" autocomplete="url" inputmode="url" required pattern="^(https?:\/\/)?([a-zA-Z0-9](-?[a-zA-Z0-9])*\.)+[a-zA-Z]{2,}(:\d+)?(\/\S*)?$" title="Enter a website URL, e.g. yourwebsite.com" />
         <button type="submit" class="btn btn-primary hero-search-btn">Free AI Visibility Report</button>
       </form>
+      <p class="reveal hero-search-hint" id="hero-search-error" role="alert">Please enter a valid website URL, e.g. yourwebsite.com</p>
       <p class="reveal hero-search-hint">Free report: see how ChatGPT, Google AI Overviews, and Perplexity describe your business.</p>
     </div>
   </section>
@@ -307,93 +308,6 @@
     </div>
   </section>
 
-  <!-- ===== CLIENT RESULTS (quote spotlight) ===== -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Real businesses. One strategy each.</h2>
-        <p class="section-sub center">We work with a deliberately small roster so every client gets a strategist's full attention, not a rotating account team.</p>
-      </div>
-
-      <div class="quote-spotlight reveal" id="quote-spotlight">
-        <span class="qs-mark" aria-hidden="true">&#8220;</span>
-
-        <div class="qs-track" id="qs-track" aria-live="polite">
-          <blockquote class="qs-slide is-active" data-index="0">
-            <p>Live Media Digital has been with us since the very beginning and has played a major role in the success of our business. They took the time to understand our clientele and built a strategy with real ROI on every dollar we spend.</p>
-          </blockquote>
-          <blockquote class="qs-slide" data-index="1">
-            <p>Very impressed with the results across all our locations. Their communication is beyond amazing.</p>
-          </blockquote>
-          <blockquote class="qs-slide" data-index="2">
-            <p>Nothing short of an excellent and professional experience. Their turn-around and professionalism is second to none.</p>
-          </blockquote>
-          <blockquote class="qs-slide" data-index="3">
-            <p>A client relationship for over two years now. They generated a dramatic increase in foot traffic by optimizing SEO for both of our clinic locations.</p>
-          </blockquote>
-        </div>
-
-        <div class="qs-footer">
-          <div class="qs-authors" id="qs-authors">
-            <div class="qs-author is-active" data-index="0"><strong>Adam Cendan</strong><span>Ultimate Containers Pro</span></div>
-            <div class="qs-author" data-index="1"><strong>Carlos Pérez</strong><span>The Tax Team</span></div>
-            <div class="qs-author" data-index="2"><strong>Ashley Godinez</strong><span>Sushi Sake Sunset</span></div>
-            <div class="qs-author" data-index="3"><strong>Carlo Suarez-Burgos</strong><span>Miracle Leaf</span></div>
-          </div>
-          <div class="qs-progress" aria-hidden="true"><span id="qs-progress-bar"></span></div>
-        </div>
-
-        <div class="qs-people" id="qs-people" role="tablist" aria-label="Choose a client story">
-          <button type="button" class="qs-person is-active" data-index="0" role="tab" aria-selected="true" aria-label="Adam Cendan, Ultimate Containers Pro">
-            <img src="assets/lmd/testimonials/ultimate-containers-pro.jpg" alt="" />
-          </button>
-          <button type="button" class="qs-person" data-index="1" role="tab" aria-selected="false" aria-label="Carlos Pérez, The Tax Team">
-            <img src="assets/lmd/testimonials/the-tax-team.jpg" alt="" />
-          </button>
-          <button type="button" class="qs-person" data-index="2" role="tab" aria-selected="false" aria-label="Ashley Godinez, Sushi Sake Sunset">
-            <img src="assets/lmd/testimonials/sushi-sake-sunset.jpg" alt="" />
-          </button>
-          <button type="button" class="qs-person" data-index="3" role="tab" aria-selected="false" aria-label="Carlo Suarez-Burgos, Miracle Leaf">
-            <img src="assets/lmd/testimonials/miracle-leaf.jpg" alt="" />
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TEAM ===== -->
-  <section class="team-intro" id="about">
-    <div class="container">
-      <div class="team-intro-inner reveal">
-        <div class="team-intro-text">
-          <h2>Your strategy team, on call.</h2>
-          <p class="section-sub">You'll work directly with Abe and Schneider, not a rotating account manager or an outsourced ticket queue.</p>
-          <a href="#consultation" class="btn btn-primary">Get Free Consultation</a>
-        </div>
-        <div class="team-cards-wrap">
-          <button type="button" class="team-arrow team-arrow-prev" id="team-prev" aria-label="Previous team member" disabled>
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="team-cards-track" id="team-cards-track">
-            <div class="team-card">
-              <img src="assets/lmd/team/abe-rodriguez.jpg" alt="Abe Rodriguez" />
-              <strong>Abe Rodriguez</strong>
-              <span>Head of Business Development</span>
-            </div>
-            <div class="team-card">
-              <img src="assets/lmd/team/schneider-jean.jpg" alt="Schneider Jean" />
-              <strong>Schneider Jean</strong>
-              <span>Chief Digital Strategist</span>
-            </div>
-          </div>
-          <button type="button" class="team-arrow team-arrow-next" id="team-next" aria-label="Next team member" disabled>
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== TRUSTED BY (logo tiles) ===== -->
   <section class="trust-tiles">
     <div class="container">
@@ -503,6 +417,93 @@
             <p class="case-row-context">"They generated a dramatic increase in foot traffic by optimizing SEO for both of our clinic locations."<span>— Carlo Suarez-Burgos</span></p>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLIENT RESULTS (quote spotlight) ===== -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Real businesses. One strategy each.</h2>
+        <p class="section-sub center">We work with a deliberately small roster so every client gets a strategist's full attention, not a rotating account team.</p>
+      </div>
+
+      <div class="quote-spotlight reveal" id="quote-spotlight">
+        <span class="qs-mark" aria-hidden="true">&#8220;</span>
+
+        <div class="qs-track" id="qs-track" aria-live="polite">
+          <blockquote class="qs-slide is-active" data-index="0">
+            <p>Live Media Digital has been with us since the very beginning and has played a major role in the success of our business. They took the time to understand our clientele and built a strategy with real ROI on every dollar we spend.</p>
+          </blockquote>
+          <blockquote class="qs-slide" data-index="1">
+            <p>Very impressed with the results across all our locations. Their communication is beyond amazing.</p>
+          </blockquote>
+          <blockquote class="qs-slide" data-index="2">
+            <p>Nothing short of an excellent and professional experience. Their turn-around and professionalism is second to none.</p>
+          </blockquote>
+          <blockquote class="qs-slide" data-index="3">
+            <p>A client relationship for over two years now. They generated a dramatic increase in foot traffic by optimizing SEO for both of our clinic locations.</p>
+          </blockquote>
+        </div>
+
+        <div class="qs-footer">
+          <div class="qs-authors" id="qs-authors">
+            <div class="qs-author is-active" data-index="0"><strong>Adam Cendan</strong><span>Ultimate Containers Pro</span></div>
+            <div class="qs-author" data-index="1"><strong>Carlos Pérez</strong><span>The Tax Team</span></div>
+            <div class="qs-author" data-index="2"><strong>Ashley Godinez</strong><span>Sushi Sake Sunset</span></div>
+            <div class="qs-author" data-index="3"><strong>Carlo Suarez-Burgos</strong><span>Miracle Leaf</span></div>
+          </div>
+          <div class="qs-progress" aria-hidden="true"><span id="qs-progress-bar"></span></div>
+        </div>
+
+        <div class="qs-people" id="qs-people" role="tablist" aria-label="Choose a client story">
+          <button type="button" class="qs-person is-active" data-index="0" role="tab" aria-selected="true" aria-label="Adam Cendan, Ultimate Containers Pro">
+            <img src="assets/lmd/testimonials/ultimate-containers-pro.jpg" alt="" />
+          </button>
+          <button type="button" class="qs-person" data-index="1" role="tab" aria-selected="false" aria-label="Carlos Pérez, The Tax Team">
+            <img src="assets/lmd/testimonials/the-tax-team.jpg" alt="" />
+          </button>
+          <button type="button" class="qs-person" data-index="2" role="tab" aria-selected="false" aria-label="Ashley Godinez, Sushi Sake Sunset">
+            <img src="assets/lmd/testimonials/sushi-sake-sunset.jpg" alt="" />
+          </button>
+          <button type="button" class="qs-person" data-index="3" role="tab" aria-selected="false" aria-label="Carlo Suarez-Burgos, Miracle Leaf">
+            <img src="assets/lmd/testimonials/miracle-leaf.jpg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM ===== -->
+  <section class="team-intro" id="about">
+    <div class="container">
+      <div class="team-intro-inner reveal">
+        <div class="team-intro-text">
+          <h2>Your strategy team, on call.</h2>
+          <p class="section-sub">You'll work directly with Abe and Schneider, not a rotating account manager or an outsourced ticket queue.</p>
+          <a href="#consultation" class="btn btn-primary">Get Free Consultation</a>
+        </div>
+        <div class="team-cards-wrap">
+          <button type="button" class="team-arrow team-arrow-prev" id="team-prev" aria-label="Previous team member" disabled>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="team-cards-track" id="team-cards-track">
+            <div class="team-card">
+              <img src="assets/lmd/team/abe-rodriguez.jpg" alt="Abe Rodriguez" />
+              <strong>Abe Rodriguez</strong>
+              <span>Head of Business Development</span>
+            </div>
+            <div class="team-card">
+              <img src="assets/lmd/team/schneider-jean.jpg" alt="Schneider Jean" />
+              <strong>Schneider Jean</strong>
+              <span>Chief Digital Strategist</span>
+            </div>
+          </div>
+          <button type="button" class="team-arrow team-arrow-next" id="team-next" aria-label="Next team member" disabled>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>
