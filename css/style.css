@@ -379,6 +379,9 @@ button{ font-family:inherit; cursor:pointer; }
 .bento-grid.expanded .bento-card-extra{ display:block; animation: bento-card-in .5s var(--ease) both; }
 .bento-grid.expanded .bento-card-extra-2{ animation-delay:.07s; }
 .bento-grid.expanded .bento-card-extra-3{ animation-delay:.14s; }
+.bento-grid.expanded .bento-card-extra-4{ animation-delay:.21s; }
+.bento-grid.expanded .bento-card-extra-5{ animation-delay:.28s; }
+.bento-grid.expanded .bento-card-extra-6{ animation-delay:.35s; }
 @keyframes bento-card-in{ from{ opacity:0; transform: translateY(16px); } to{ opacity:1; transform:translateY(0); } }
 @media (prefers-reduced-motion: reduce){
   .bento-grid.expanded .bento-card-extra{ animation:none; }
